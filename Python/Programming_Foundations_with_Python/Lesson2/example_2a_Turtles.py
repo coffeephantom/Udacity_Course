@@ -5,6 +5,8 @@ def draw_square():
     window.bgcolor("red")
 
     brad = turtle.Turtle("turtle")
+    brad.color("white")
+    brad.fillcolor("yellow")
     brad.forward(100)
     brad.right(90)
     brad.forward(100)
