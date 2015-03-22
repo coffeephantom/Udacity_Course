@@ -21,10 +21,16 @@ def draw_circle():
     angie.color("blue")
     angie.circle(100)
 
-  
-    
+def draw_triangle():
+    fred=turtle.Turtle()
+    fred.shape("circle")
+    fred.color("black")
+    fred.forward(100)
+    fred.goto(50,50)  
+    fred.goto(0,0)
 window =turtle.Screen()
 window.bgcolor("red")
 draw_square()
 draw_circle()
+draw_triangle()
 window.exitonclick()  
