@@ -1,3 +1,6 @@
+#!/usr/bin/python
+#-*- coding:utf-8 -*-
+
 import turtle
 
 def draw_square(turtle):
@@ -20,8 +23,12 @@ def draw_art():
     brad.color("white")
     brad.fillcolor("yellow")
     brad.speed("fast")
-    draw_square(brad)
 
+    #转360度，每次转10度一共要转36次。
+    for x in xrange(1,37):
+        draw_square(brad)
+        brad.right(10)
+    '''
     angie = turtle.Turtle()
     angie.shape("arrow")
     angie.color("blue")
@@ -31,6 +38,7 @@ def draw_art():
     fred.shape("circle")
     fred.color("black")
     draw_triangle(fred)
+    '''
 
     window.exitonclick()
 
