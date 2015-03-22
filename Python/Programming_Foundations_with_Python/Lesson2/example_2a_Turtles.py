@@ -5,14 +5,9 @@ def draw_square():
     brad.color("white")
     brad.fillcolor("yellow")
     brad.speed("fast")
-    brad.forward(100)
-    brad.right(90)
-    brad.forward(100)
-    brad.right(90)
-    brad.forward(100)
-    brad.right(90)
-    brad.forward(100)
-    brad.right(90)
+    for x in xrange(1,5):
+        brad.forward(100)
+        brad.right(90)
     
 
 def draw_circle():
