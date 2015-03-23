@@ -13,5 +13,9 @@ def check_profanity(text_to_check):
     output = connection.read()
     print(output)
     connection.close()
+    if "true":
+        print "Profanity Alert"
+    else:
+        print "No curse Words"
 
 read_text()
