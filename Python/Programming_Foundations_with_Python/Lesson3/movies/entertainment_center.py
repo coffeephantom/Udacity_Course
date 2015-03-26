@@ -18,3 +18,4 @@ movies=[toy_story,avatar,big_hero_6]
 
 fresh_tomatoes.open_movies_page(movies)
 print media.Movie.valid_ratings
+print media.Movie.__doc__
