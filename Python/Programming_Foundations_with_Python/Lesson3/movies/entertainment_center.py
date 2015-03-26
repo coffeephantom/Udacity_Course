@@ -17,3 +17,4 @@ big_hero_6 = media.Movie ("Big Hero 6","The adventure of junior robotic genius, 
 movies=[toy_story,avatar,big_hero_6]
 
 fresh_tomatoes.open_movies_page(movies)
+print media.Movie.valid_ratings
