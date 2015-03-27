@@ -17,6 +17,8 @@ Jane = Student("Jane","19","Arts")
 print Student.__name__
 print Student.__module__
 print Student.__doc__
+print Student.__bases__
+print Student.__dict__
 
 
 
