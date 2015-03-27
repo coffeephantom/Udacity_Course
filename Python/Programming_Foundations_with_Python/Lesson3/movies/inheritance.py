@@ -5,6 +5,10 @@ class Parent(object):
         print "Parent Constructor Called"
         self.last_name = last_name
         self.eye_color = eye_color
+    
+    def show_info(self):
+        print "Last Name - "+self.last_name
+        print "Eye Color - "+self.eye_color
 
 class Child(Parent):#表示Child继承父类
     """docstring for Child"""
@@ -12,10 +16,18 @@ class Child(Parent):#表示Child继承父类
         print "Child  Constructor Called"
         Parent.__init__(self,last_name,eye_color)
         self.number_of_toys = number_of_toys
+
+    def show_info(self):
+        print "Last Name - "+self.last_name
+        print "Eye Color - "+self.eye_color
+        print "Number of Toys - "+str(self.number_of_toys)
+        
         
 #billy_cyrus = Parent("Cyrus","blue")
+#billy_cyrus.show_info()
 #print billy_cyrus.last_name
 
 miley_cyrus = Child("Cyrus","Blue",5)
-print miley_cyrus.last_name
-print miley_cyrus.number_of_toys
+#print miley_cyrus.last_name
+#print miley_cyrus.number_of_toys
+miley_cyrus.show_info()
