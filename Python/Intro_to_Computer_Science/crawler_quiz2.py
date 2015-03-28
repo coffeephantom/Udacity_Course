@@ -8,8 +8,7 @@
 # that your code still prints the same thing.
 
 # page = contents of a web page
-page =('<div id="top_bin"><div id="top_content" class="width960">'
-'<div class="udacity float-left"><a href="http://udacity.com">')
+page =('<div id="top_bin"><div id="top_content" class="width960">''<div class="udacity float-left"><a href="http://udacity.com">')
 
 #page = '<a href="http://udacity.com">Hello world</a>'
 
@@ -21,5 +20,9 @@ start_url=url_temp.find('"')
 end_url = url_temp.find('">')
 url = url_temp[start_url+1:end_url]
 
+#Anwser
+#start_quote = page.find('"',start_link)
+#end_quote = page.find('"',start_quote+1)
+#url = page[start_quote+1:end_quote]
 
 print url
