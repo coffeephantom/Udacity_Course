@@ -1,0 +1,1342 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>Class</title></head><body><article class="markdown-body"><blockquote>
+<p>原文地址:<a href="http://www2.lib.uchicago.edu/keith/courses/python/class/5/">http://www2.lib.uchicago.edu/keith/courses/python/class/5/</a></p>
+</blockquote>
+<h1 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>类定义语法</h1>
+<p>在python中类由类定义创建，有着相关的命名空间，支持属性查询，并且可以被调用。</p>
+<pre><code>class name[(expr[,expr]*)]:
+    suite
+</code></pre>
+<p>类定义是一个可执行声明，所以可以用在任何可以进行可执行声明的地方。当执行这个声明的时候,每个expr都会按照类进行计算,然后在新建的本地命名空间执行suite:设想suite中的声明会和这个命名空间绑定,这些声明通常是一些赋值和函数。而执行suite以后,name即为外部（调用的）命名空间中的新建类,并且类定义新建的命名空间和类对象是有联系的。</p>
+<h1 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>类预定义属性</h1>
+<p>类有5个预定义属性<br />
+<table><br />
+    <tr><br />
+        <td>属性</td><br />
+        <td>类型</td><br />
+        <td>读／写</td><br />
+        <td>描述</td><br />
+    </tr><br />
+    <tr><br />
+        <td><strong>dict</strong></td><br />
+        <td>词典</td><br />
+        <td>R/W</td><br />
+        <td>类命名空间</td><br />
+    </tr><br />
+    <tr><br />
+        <td><strong>name</strong></td><br />
+        <td>字符串</td><br />
+        <td>R/O</td><br />
+        <td>类名称</td><br />
+    </tr><br />
+    <tr><br />
+        <td><strong>bases</strong></td><br />
+        <td>类的元组</td><br />
+        <td>R/O</td><br />
+        <td>所继承的类</td><br />
+    </tr><br />
+    <tr><br />
+        <td><strong>doc</strong></td><br />
+        <td>字符串或者为None</td><br />
+        <td>R/W</td><br />
+        <td>类文档字符串</td><br />
+    </tr><br />
+    <tr><br />
+        <td><strong>module</strong></td><br />
+        <td>字符串</td><br />
+        <td>R/W</td><br />
+        <td>用以定义类的模块名</td><br />
+    </tr><br />
+</table></p>
+<h1 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>作为纪录和结构的类</h1>
+<p>类的最简单的用法就是笛卡尔类型,就像Pascal中的纪录或者说C中的结构</p>
+<pre><code>class foo:
+    a, b, c = 0, "bar", (1,2)
+</code></pre>
+<h2 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>类的实例化</h2>
+<p>调用类对象实现了类的实例化:</p>
+<pre><code>i=foo()
+    pirnt i.a,i.b,i.c
+</code></pre>
+<p>在上述例子中,i是类foo的一个实例,a,b,c可以通过赋值进行修改：</p>
+<pre><code>i.a=12
+    i.new="yikes"
+</code></pre>
+<p>注意在新建类时没有定义的新参数，可以通过赋值创建，非常简单。确实，在进行交互性工作的时候，空类非常好用。</p>
+<pre><code>class foo: pass
+    foo.a = 1
+    foo.b = 2
+</code></pre>
+<h2 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>实例属性</h2>
+<p>实例有两个预定义属性<br />
+<table><br />
+    <tr><br />
+        <td>属性</td><br />
+        <td>类型</td><br />
+        <td>读／写</td><br />
+        <td>描述</td><br />
+    </tr><br />
+    <tr><br />
+        <td><strong>dict</strong></td><br />
+        <td>词典</td><br />
+        <td>读／写</td><br />
+        <td>实例命名空间</td><br />
+    </tr><br />
+    <tr><br />
+        <td><strong>class</strong></td><br />
+        <td>类</td><br />
+        <td>读／写</td><br />
+        <td>实例所对应的类</td><br />
+    </tr><br />
+</table></p>
+<h2 id="vs"><a name="user-content-vs" href="#vs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>类属性 vs 实例属性</h2>
+<p>理解类属性与实例属性的区别是十分重要的,因为类属性也可以通过实例进行访问。<br />
+在类中定义的属性, 但凡是在类中定义的，还是之后通过对类属性参数进行赋值的，都称为类属性。<br />
+它们保存在类的命名空间。（即类的__dict__当中）</p>
+<p>在实例中通过赋值定义的属性称为实例属性，即使存在与类属性重名的，也是存储在实例的命名空间。通过实例赋值,会使得实例属性覆盖类属性:</p>
+<pre><code>class foo:
+    a = 1
+    i = foo()
+    foo.a =&gt; 1
+    i.a =&gt; 1
+    i.a = "inst"
+    foo.a =&gt; 1
+    i.a =&gt; "inst"
+</code></pre>
+<p>可以通过实例属性改变类属性，不过你需要让python显示命名空间。</p>
+<pre><code>foo.a =&gt; 1
+    i.__class__.__dict__[a] = "class"
+    foo.a =&gt; "class"
+    i.a =&gt; "inst"
+</code></pre>
+<p>当你用点操作符指向实例的属性时,Python首先查看实例命名空间,如果该属性没有找到,它会查看类命名空间。以下是用python语言描述的实例属性查找算法:</p>
+<pre><code>def instlookup(inst,name):
+    #simplfied algorithm
+    if inst.__dict__.has_key(name):
+        return inst.__dict__[name]
+    else:
+        return inst.__class__.__dict__[name]
+</code></pre>
+<p>注意如果在实例和类中均没有找到这个属性，那么这个函数会报AttributiveError的错误,就像python那样。</p>
+<h1 id="_6"><a name="user-content-_6" href="#_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>在内容定义函数：方法</h1>
+<p>假设我们有笛卡尔坐标：</p>
+<pre><code>cpt=(3,4)
+</code></pre>
+<p>然后有一个计算其到原点距离的函数：</p>
+<pre><code>def distanceToOrigin(p):
+    from math import floor,sqrt
+    return floor(sqrt(p[0]**2+p[1]**2)
+</code></pre>
+<p>现在在我们的程序当中，我们对点进行操作时，只需要调用：</p>
+<pre><code>print distanceToOrigin(cpt)
+</code></pre>
+<p>假设我们要定义一种新的坐标，叫做曼哈顿坐标：</p>
+<pre><code>mpt=(3,4)
+</code></pre>
+<p>它使用另一种距离计算函数，我们马上希望重新命名我们第一个函数：</p>
+<pre><code>CartesianDistanceToOrigin = distanceToOrigin
+</code></pre>
+<p>然后我们可以定义曼哈顿版本的：</p>
+<pre><code>def ManhattanDistanceToOrigin(p):
+    return abs(p[0]) + abs(p[1])
+</code></pre>
+<p>这显示了一个命名空间的问题:我们需要将笛卡尔和曼哈顿函数存储在不同的命名空间。我们可以利用python的模块来完成这一点：(cartesian.distanceToOrigin, manhattan.distanceToOrigin)，但是我们又遇到了另外一个问题：我们怎么知道哪个点属于哪个坐标呢？我们需要在元组当中加一个标签进行区分。</p>
+<pre><code>CARTESIAN, MANHATTAN = 0, 1
+cpt = (CARTESIAN, 3, 4)
+mpt = (MANHATTAN, 3, 4)
+</code></pre>
+<p>(当然, 因为我们对象的属性是根据位置定义的,我们现在需要重写我们的距离函数，但是这并不是我们正在考虑的问题……) 并且, 糟糕的是, 我们需要在每次使用这段代码的地方增加标签判断代码:</p>
+<pre><code>if pt[0] == CARTESIAN:
+    print cartesian.distanceToOrigin(pt)
+elif pt[0] == MANHATTAN:
+    print manhattan.distanceToOrigin(pt)
+else:
+    raise TypeError, pt
+</code></pre>
+<p>为了解决这个问题， 我们可以写一个通用函数，这样就能保持条件位于一个地方, 但是我们仍然存在每新增一个新类型点就要更新这个条件的问题更新。如果新类型发生了改动，但是通用函数没有发生改动，这就会产生问题。(你会对针对新类型点的］作出改动，但是你也许并不了解外部每个需要更新条件的点操作通用函数。）解决方法是把函数和其操作各种类型的对象联系在一起T。这种函数叫做对象的方法。:</p>
+<pre><code>cpt = (3,4, lambda p: floor(sqrt(p[0]**2 + p[1]**2)))
+</code></pre>
+<p>现在为了计算pt点到原点的距离, 我们不需要其他条件了: 每个点都知道如何去计算它自己的距离: pt<a href="pt">2</a>.</p>
+<pre><code>print cpt[2](cpt)
+</code></pre>
+<p>即使对象执行它的函数, 我们也用不着条件或者是类型信息 (至少不是为了这个原因。) 并且针对新类型点的改动，也不需要去改动其他通用函数。</p>
+<pre><code>mpt = (3,4, lambda p: p[0] + p[1])
+print mpt[2](mpt)
+</code></pre>
+<p>这是面向对象编程的基本概念.</p>
+<p>上述例子最大的问题之一是使用了元组及其代表位置的下标。显然使用词典会更好:</p>
+<pre><code>cpt = {
+    "x": 3,
+    "y": 4,
+    "distanceToOrigin": lambda p: floor(sqrt(p["x"]**2 + p["y"]**2))
+    }
+    print cpt["distanceToOrigin"](cpt)
+</code></pre>
+<p>但是词典并不产生任何模板工具: 使用词典,对于我们定义的每一点，我们需要复制到distanceToOrigin定义当中. 我们需要的是类似Pascal或者是C中结构的东西，而Python则可以使用类:</p>
+<pre><code>class cartesian:
+    x, y = 0, 0
+    def distanceToOrigin(p):
+    return floor(sqrt(p.x**2 + p.y**2))
+cpt = cartesian()
+cpt.x, cpt.y = 3,4
+# WARNING: the following is not correct Python code...
+print cpt.distanceToOrigin(cpt)
+</code></pre>
+<p>这看起来好多了, 但是总是都要向对象本身传递它的方法有些烦人，尤其因为对象是主要的，并且有可能有着复杂的表达式。比如：</p>
+<pre><code>x[y].distanceToOrigin(x[y])
+</code></pre>
+<p>这很容易出错，而且有可能很低效(因为重计算的关系) ，因为它总是需要把复杂的对象表达式赋值给本地变量，所以python给出了一个十分好用的语法来帮助我们完成这个工作：如果你在一个类中定义了一个函数，它假设这个函数是这个类的方法，所以当它被调用的时候，Python会在后台首先把实例作为第一个参数传递给它，所以调用distanceToOrigin方法的正确途径十分简单:</p>
+<pre><code>print cpt.distanceToOrigin()
+</code></pre>
+<h2 id="self"><a name="user-content-self" href="#self" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Self</h2>
+<p>在python当中把方法的第一个参数命名为self是一个传统, 比如:</p>
+<pre><code>class cartesian:
+    def distanceToOrigin(self):
+    return floor(sqrt(self.x**2 + self.y**2))
+</code></pre>
+<p>这种命名方式并不是强制的, 但是如果你使用其他命名方式的话，在别的python编程者看起来会很奇怪。</p>
+<h2 id="_7"><a name="user-content-_7" href="#_7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>自定义对象</h2>
+<p>Python allows you to customize your objects by defining some methods with special names:</p>
+<p><strong>init</strong> Method</p>
+<pre><code>  def __init__(self, parameters):
+      suite
+</code></pre>
+<p>The parameters are as for ordinary functions, and support all the variants: positional, default, keyword, etc. When a class has an <strong>init</strong> method, you pass parameters to the class when instantiating it, and the <strong>init</strong> method will be called with these parameters. Usually the method will set various instance variables via self.</p>
+<pre><code>  class cartesian:
+      def __init__(self, x=0, y=0):
+          self.x, self.y = x, y
+</code></pre>
+<p><strong>del</strong> Method</p>
+<pre><code>  def __del__(self):
+      suite
+</code></pre>
+<p>A <strong>del</strong> method is called when an object is deleted, which is when the garbage collector decides that their are no more references to an object. Note that this is not necessarily when the object is explicitly deleted with the del statement. The <strong>del</strong> method takes exactly one parameter, self. Due to a weirdness in the current C implementation of Python, exceptions are ignored in <strong>del</strong> methods: instead, an error will be printed to standard error.</p>
+<p><strong>repr</strong> Method</p>
+<pre><code>  def __repr__(self):
+      suite
+</code></pre>
+<p>A <strong>repr</strong> method takes exactly one parameter, self, and must return a string. This string is intended to be a representation of the object, suitable for display to the programmer, for instance when working in the interactive interpreter. <strong>repr</strong> will be called anytime the builtin repr function is applied to an object; this function is also called when the backquote operator is used.</p>
+<p><strong>str</strong> Method</p>
+<pre><code>  def __str__(self):
+      suite
+</code></pre>
+<p>The <strong>str</strong> method is exactly like <strong>repr</strong> except that it is called when the builtin str function is applied to an object; this function is also called for the %s escape of the % operator. In general, the string returned by <strong>str</strong> is meant for the user of an application to see, while the string returned by <strong>repr</strong> is meant for the programmer to see, as in debugging and development: but there are no hard and fast rules about this. You&rsquo;re best off just thinking, <strong>str</strong> for %s, <strong>repr</strong> for backquotes.</p>
+<p>Inheritance</p>
+<p>Using classes to define objects provides a templating facility: class attributes and methods need only be defined once, and you can then instantiate any number of objects, all sharing the same methods.</p>
+<p>But we could benefit from more sharing opportunities. Lots of times classes of related objects differ only slightly from one another. Consider the full definitions of our two classes of points:</p>
+<pre><code>  class cartesian:
+      def __init__(self, x=0, y=0):
+          self.x, self.y = x, y
+      def distanceToOrigin(self):
+      return floor(sqrt(self.x**2 + self.y**2))
+  class manhattan:
+      def __init__(self, x=0, y=0):
+          self.x, self.y = x, y
+      def distanceToOrigin(self):
+      return self.x + self.y
+</code></pre>
+<p>Both of these classes share the same <strong>init</strong> method, yet we have to code it twice. We can solve this problem by abstracting the common method into a new, more generic class called point:</p>
+<pre><code>  class point:
+      def __init__(self, x=0, y=0):
+          self.x, self.y = x, y
+</code></pre>
+<p>Now we can redefine cartesian and manhattan and specify that they inherit from point:</p>
+<pre><code>  class cartesian(point):
+      def distanceToOrigin(self):
+      return floor(sqrt(self.x**2 + self.y**2))
+  class manhattan(point):
+      def distanceToOrigin(self):
+      return self.x + self.y
+</code></pre>
+<p>We can define all behavior common to all types of points in the point class, and then define any number of subclasses of point which inherit from it. We could go farther and define subclasses of cartesian or manhattan if that were appropriate.</p>
+<p>In some object-oriented languages (e.g., Java), point would be an abstract class: in other words, a class that&rsquo;s used only to inherit from, and not itself directly instantiated. Python doesn&rsquo;t make this distinction: if you want to instantiate point, go right ahead!</p>
+<p>Let&rsquo;s look at the class definitition syntax again:</p>
+<pre><code>  class name[(expr[,expr]*)]:
+      suite
+</code></pre>
+<p>As mentioned earlier, each expr, if given, must evaluate to a class, and now we know why: these are called the base classes, and are the classes that the new class inherits from. If multiple base classes are given, the new class inherits from all of them: this is called multiple inheritance. See the next section for an explanation of how attribute reference works in the presence of multiple inheritance.</p>
+<p>Attribute Reference in Detail</p>
+<p>Now we can explain class and instance attribute reference in detail.</p>
+<p>When looking up an attribute via a class object C, Python first searches the class&rsquo;s name space (C.<strong>dict</strong>); if it doesn&rsquo;t find the attribute, it then recursively searches the class&rsquo;s base classes, left to right and depth first.</p>
+<p>When looking up an attribute via an instance object i, Python first searches the instance&rsquo;s name space (i.<strong>dict</strong>); if it doesn&rsquo;t find the attribute, it then searches the instance&rsquo;s class (i.<strong>class</strong>) as described in the previous paragraph.</p>
+<p>Here are the complete algorithms for class attribute lookup and instance attribute lookup. These functions each return a 2-tuple whose first element is a truth value indicating the success of the lookup, and whose second element is the value of the attribute, if the lookup was successful, or None if not:</p>
+<pre><code>def classlookup(C, name):
+    if C.__dict__.has_key(name):
+    return (1, C.__dict__[name])
+    else:
+    for b in C.__bases__:
+        success, value = classlookup(b, name)
+        if success:
+        return (1, value)
+        else:
+        pass
+    else:
+        return (0, None)
+
+def instlookup(I, name):
+    if I.__dict__.has_key(name):
+    return (1, I.__dict__[name])
+    else:
+    return classlookup(I.__class__, name)
+</code></pre>
+<p>Protection</p>
+<p>Some B&amp;D-oriented languages prevent access to the attributes of a class or instance, the idea being that if the author of the class didn&rsquo;t define a method to manipulate an attribute, then the user of the instance has no right to examine or change it. As you might have already guessed, Python doesn&rsquo;t take this approach. Attribute reference syntax can be used to access most instance and class attributes, and <strong>dict</strong> attributes give the entire show away. The assumption is that you know what you&rsquo;re doing, and if you want to shoot yourself in the foot, that&rsquo;s your affair.</p>
+<p>That said, Python does support name mangling: if a method or other attribute name starts with two leading underscores (e.g., __secret), Python magically changes the name so that references to this attribute made in the usual way will fail:</p>
+<pre><code>  class foo:
+      def __secret(self): pass
+  foo.__secret =&gt; AttributeError: __secret
+</code></pre>
+<p>This protection is purely advisory, however: if we examine the class name space we can see what Python is up to:</p>
+<pre><code>  foo.__dict__ =&gt; {'_foo__secret': &lt;function __secret at fc328&gt;, '__module__': '__main__', '__doc__': None}
+</code></pre>
+<p>The method name has been changed, or mangled, into _foo__secret: i.e., prefixed with underscore and the class name. Since this is documented behavior, you can use this name, either going through the <strong>dict</strong> directly, or just via attribute reference (foo._foo__secret), to access the attribute.</p>
+<p>Polymorphism</p>
+<p>Another important attribute of an object-oriented programming language is polymorphism: the ability to use the same syntax for objects of different types. (Strictly speaking, this is ad-hoc polymorphism.) For example, in Python, the square bracket operator is used to perform indexing of various sequence types (list[3], dict[&ldquo;foo&rdquo;]); polymorphism allows us to define our own types, as classes, that emulate builtin Python types like sequences and which therefore can use e.g. square brackets for indexing.</p>
+<p>Customizing Attribute Reference</p>
+<p>We&rsquo;ll start by showing how to override the behavior of the dot operator, which does attribute reference in classes and instances. By customizing attribute reference, an object can perform an arbitrary action whenever one of its attributes is referenced, such as type checking.</p>
+<p><strong>getattr</strong> Method</p>
+<pre><code>  def __getattr__(self, name):
+</code></pre>
+<p>This method, if defined, is called when attribute lookup fails. For example, consider the following:</p>
+<pre><code>  class foo:
+      a = 0
+      def __getattr__(self, name):
+          return "%s: DEFAULT" % name
+  i = foo()
+  i.b = 1
+</code></pre>
+<p>Since the attribute a is a class attribute of instance i, and the attribute b is an instance attribute of i, the <strong>getattr</strong> method isn&rsquo;t called when either of these are accessed:</p>
+<pre><code>  i.a, i.b =&gt; 0, 1
+</code></pre>
+<p>But if we try to access an undefined attribute, say c, <strong>getattr</strong> is called, with the attribute name as a parameter:</p>
+<pre><code>  i.c =&gt; "c: DEFAULT"
+</code></pre>
+<p>Note that <strong>getattr</strong> won&rsquo;t be called if attribute lookup succeeds via inheritance.</p>
+<p>The <strong>getattr</strong> method should either return a value (of any type) or raise an AttributeError exception.</p>
+<p><strong>setattr</strong> Method</p>
+<pre><code>  def __setattr__(self, name, value):
+</code></pre>
+<p><strong>setattr</strong> is called whenever an attribute assignment is attempted, regardless of whether or not the attribute is already bound in the instance or class. This happens instead of the normal mechanism of storing the value in the instance dictionary. This method can be used, for example, to perform type checking on a value before assigning it.</p>
+<p>The <strong>setattr</strong> method should not try to assign a value to an attribute in the usual way, i.e., self.name = value, as this will result in an infinite number of recursive calls to <strong>setattr</strong>; instead, the instance dictionary should be used directly:</p>
+<pre><code>  def __setattr__(self, name, value):
+      self.__dict__[name] = value
+</code></pre>
+<p><strong>delattr</strong> Method</p>
+<pre><code>  def __delattr__(self, name):
+</code></pre>
+<p>This method is called when an attribute is deleted via the del statement.</p></article></body></html>
