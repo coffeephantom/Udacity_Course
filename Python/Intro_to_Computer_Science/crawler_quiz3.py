@@ -20,5 +20,14 @@ def get_next_target(page):
         return url, end_quote
     else:
         return None,0
+
+def find_all_links(page):
+    while 1:
+        url,endpos=get_next_target(page)
+        if url:
+            print url
+            page=page[endpos:]
+        else:
+            break
                  
 
