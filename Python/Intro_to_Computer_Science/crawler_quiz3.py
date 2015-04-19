@@ -1,3 +1,5 @@
+#!usr/bin/python
+#-*-coding:utf-8-*-
 # Modify the get_next_target procedure so that
 # if there is a link it behaves as before, but
 # if there is no link tag in the input string,

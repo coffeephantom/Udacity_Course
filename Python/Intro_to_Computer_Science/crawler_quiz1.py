@@ -1,3 +1,6 @@
+#!/usr/bin/python
+#-*-coding:utf-8-*-
+
 # Write Python code that initializes the variable
 # start_link to be the value of the position
 # where the first '<a href=' occurs in a page.

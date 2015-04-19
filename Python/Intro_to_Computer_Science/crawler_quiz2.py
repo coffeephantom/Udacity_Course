@@ -1,3 +1,6 @@
+#!/usr/bin/python
+#-*-coding:utf-8-*-
+
 # Write Python code that assigns to the 
 # variable url a string that is the value 
 # of the first URL that appears in a link 
